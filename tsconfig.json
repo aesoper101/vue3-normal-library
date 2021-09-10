@@ -9,8 +9,15 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "declaration": true,
+    "declarationDir": "dist/types",
+    "baseUrl": ".",
     "esModuleInterop": true,
-    "lib": ["esnext", "dom"]
+    "noImplicitAny": false,
+    "importHelpers": true,
+    "lib": ["esnext", "dom"],
+    "typeRoots": ["types"],
+    "types": ["vite/client"]
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "exclude": ["node_modules", "public", "favicon.ico"]
 }

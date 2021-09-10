@@ -1,6 +1,6 @@
 import { computed, onActivated, onBeforeUnmount, onDeactivated, ref } from "vue";
-import { cancelRaf, raf } from "../../utils/raf";
-import { inBrowser } from "../../utils/base";
+import { cancelRaf, raf } from "../../utils";
+import { inBrowser } from "../../utils";
 
 export interface CurrentTime {
   dayHourMinuteSecond: DayHourMinuteSecond;

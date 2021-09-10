@@ -1,7 +1,9 @@
 import requestAnimationFrame from "raf";
 import { forEach, isArray, isNumber } from "lodash-es";
 
-export function cancelRaf(rafId: number | number[]) {
+export type RafId = number | number[];
+
+export function cancelRaf(rafId: RafId) {
   if (isNumber(rafId)) {
     requestAnimationFrame.cancel(rafId);
   } else if (isArray(rafId)) {

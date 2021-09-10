@@ -2,7 +2,6 @@ import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import * as path from "path";
 import vueJsx from "@vitejs/plugin-vue-jsx";
-import typescript from "rollup-plugin-typescript2";
 
 import pkg from "./package.json";
 
@@ -28,23 +27,7 @@ export default defineConfig({
           vue: "Vue",
         },
       },
-      plugins: [
-        typescript({
-          tsconfigOverride: {
-            include: ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
-            exclude: [
-              "node_modules",
-              "utils/**/__tests__/*",
-              "src/main.ts",
-              "tests/**/*.ts",
-              "tests/**/*.tsx",
-              "public",
-              "favicon.ico",
-            ],
-          },
-          abortOnError: false,
-        }),
-      ],
+      plugins: [],
     },
   },
   plugins: [vue(), vueJsx()],

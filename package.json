@@ -1,18 +1,19 @@
 {
   "name": "vue3-normal-library",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "dist/vue3-normal-library.es.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/types/index.d.ts",
   "scripts": {
     "dev": "vite",
-    "build": "rimraf dist && vue-tsc --noEmit && vite build",
+    "build": "rimraf dist && vue-tsc --noEmit && vite build && tsc",
     "serve": "vite preview",
     "lint:lint-staged": "lint-staged -c ./.husky/lintstagedrc.js",
     "lint:pretty": "pretty-quick --staged",
     "prepare": "husky install",
     "clean:dist": "rimraf dist",
     "pub": "cd dist && npm publish --registry=http://registry.npmjs.org --access public && cd ..",
-    "unpub": "npm unpublish vue3-normal-library --force --registry=http://registry.npmjs.org"
+    "unpub": "npm unpublish vue3-normal-library --force --registry=http://registry.npmjs.org",
+    "prelink": "cd dist && yarn link && cd .. && yarn link vue3-normal-library"
   },
   "dependencies": {
     "vue": "^3.2.6",
@@ -50,5 +51,9 @@
     "conventional-changelog-cli": "^2.1.1",
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-typescript": "^7.0.0"
+  },
+  "peerDependencies": {
+    "@vue/compiler-sfc": "^3.2.6",
+    "vue": "^3.2.6"
   }
 }
