@@ -6,11 +6,13 @@
     "moduleResolution": "node",
     "strict": true,
     "jsx": "preserve",
-    "sourceMap": true,
+    "sourceMap": false,
     "resolveJsonModule": true,
     "declaration": true,
     "declarationDir": "dist/types",
     "baseUrl": ".",
+    "outDir": "dist",
+    "noEmitOnError": true,
     "esModuleInterop": true,
     "noImplicitAny": false,
     "importHelpers": true,
@@ -18,6 +20,6 @@
     "typeRoots": ["types"],
     "types": ["vite/client"]
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "exclude": ["node_modules", "public", "favicon.ico"]
+  "include": ["packages/**/*.ts", "packages/**/*.d.ts", "packages/**/*.tsx", "packages/**/*.vue"],
+  "exclude": ["node_modules", "public", "favicon.ico", "vite.config.ts"]
 }

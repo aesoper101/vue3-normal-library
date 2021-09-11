@@ -4,3 +4,4 @@ export * from "./useMemo";
 export * from "./useState";
 export * from "./useCountDown";
 export * from "./useRelation";
+export * from "./useLock";
