@@ -1,7 +1,7 @@
 import { PropType } from "vue";
 import { VueTypeValidableDef, VueTypeDef } from "vue-types";
 
-const initDefaultProps = <T>(
+export const initDefaultProps = <T>(
   types: T,
   defaultProps: {
     [K in keyof T]?: T[K] extends VueTypeValidableDef<infer U>
@@ -28,5 +28,3 @@ const initDefaultProps = <T>(
   });
   return propTypes;
 };
-
-export default initDefaultProps;
