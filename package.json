@@ -1,6 +1,6 @@
 {
   "name": "vue3-normal-library",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "main": "dist/vue3-normal-library.es.js",
   "types": "dist/types/index.d.ts",
   "scripts": {

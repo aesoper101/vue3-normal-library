@@ -1,7 +1,7 @@
 import { PropType } from "vue";
 import { VueTypeValidableDef, VueTypeDef } from "vue-types";
 
-export const initDefaultProps = <T>(
+export function initDefaultProps<T>(
   types: T,
   defaultProps: {
     [K in keyof T]?: T[K] extends VueTypeValidableDef<infer U>
@@ -12,7 +12,7 @@ export const initDefaultProps = <T>(
       ? U
       : any;
   }
-): T => {
+): T {
   const propTypes: T = { ...types } as T;
   Object.keys(defaultProps).forEach((k) => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -27,4 +27,4 @@ export const initDefaultProps = <T>(
     }
   });
   return propTypes;
-};
+}
