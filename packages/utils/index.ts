@@ -7,3 +7,5 @@ export * from "./onMountedOrActivated";
 export * from "./raf";
 export * from "./initDefaultProps";
 export * from "./mountComponent";
+export * from "./withInstall";
+export * from "./validate";
